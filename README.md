@@ -1,7 +1,7 @@
 # Univerlist Landing Page Clone
 
-I clonned the landing page of Univerlist. The clonned webpage can be reached trough this link [https://univerlist.com]. 
-I clonned this page to practise html, css and JavaScript. I didn't do any API calls and the page is totally static. 
+I clonned the landing page of Univerlist. The original webpage can be reached trough this link [https://univerlist.com]. 
+I clonned this webpage to practise html, css and JavaScript. I didn't do any API calls so the page is totally static. 
 
 
 ## Aspects 
