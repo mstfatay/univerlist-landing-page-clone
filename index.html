@@ -1,0 +1,751 @@
+
+<html>
+    <head>
+        <title>Find Your Dream University | Univerlist</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+        <link rel="icon" href="media/favicon.ico">
+
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div id="mobilenavmenu" style="height:100%; width:100%; display:none; position:fixed; background-color: white; z-index: 1000000;">
+            <div class="container" style="margin:auto;">
+                <div class="fluid-container d-flex d-lg-none align-items-center justify-content-between" style="border-bottom: 1px solid #eceaea; height:74px; box-sizing: content-box;">
+                    <a href="/">
+                        <img src="media/univerlist_logo.svg" style="max-width: 100%">
+                    </a>
+                    <div style="padding:12px;" onclick="closeMobileNavMenu();">
+                        <img src="media/close_menu.svg" style="height: 20px;">
+                    </div>
+                    
+                </div>
+                <div class="row" style="margin-top:32px;">
+                    <a href="#" class="span">
+                        <img src="media/search.svg" style="margin-right:4px; vertical-align: top;">
+                        <span style="line-height: normal;">Search</span>
+                    </a>
+                    <a href="#" class="span navmobile-item" style="padding-top: 29px;">
+                        <span>Compare</span>
+                    </a>
+                    <a href="#" class="span navmobile-item">
+                        <span>Universities</span>
+                    </a>
+                    <a href="#" class="span navmobile-item">
+                        <span>Blog</span>
+                    </a>
+                    <a href="#" class="span navmobile-item">
+                        <span>Rankings</span>
+                    </a>
+                    <a href="#" class="span navmobile-item" style="padding-bottom: 28px; border-bottom: solid 1px #eceaea;">
+                        <span>About us</span>
+                    </a>
+                    <a href="#" class="span navmobile-item" style="padding-top: 30px;">
+                        <span>Sign up</span>
+                    </a>
+                    <a href="#" class="span navmobile-item">
+                        <span>Log in</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mobilebelowmenu d-flex d-md-none fixed-bottom align-items-center justify-content-around">
+            <a href="#" style="color: #601111;text-decoration: unset">
+                <div class="col-auto d-flex flex-column align-items-center" style="padding-left:8px; padding-right: 8px;">
+                    <div class="icon icon-Library" style="margin-bottom: 4px;"></div>
+                    <span>Universities</span>
+                </div>
+            </a>
+            <a href="#" style="color: #601111;text-decoration: unset">
+                <div class="col-auto d-flex flex-column align-items-center" style="padding-left:8px; padding-right: 8px;">
+                    <div class="icon icon-Books" style="margin-bottom: 4px;"></div>
+                    <span>Programs</span>
+                </div>
+            </a>
+            <a href="#" style="color: #601111;text-decoration: unset">
+                <div class="col-auto d-flex flex-column align-items-center" style="padding-left:8px; padding-right: 8px;">
+                    <div class="icon icon-Notepad" style="margin-bottom: 4px;"></div>
+                    <span>Blogs</span>
+                </div>
+            </a>
+            <a href="#" style="color: #601111;text-decoration: unset">
+                <div class="col-auto d-flex flex-column align-items-center" style="padding-left:8px; padding-right: 8px;">
+                    <div class="icon icon-Scale" style="margin-bottom: 4px;"></div>
+                    <span>Compare</span>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- navbar -->
+        <div id="navblock" style="border-bottom: 1px solid #eceaea;">
+            <div id="fullnav" class="fluid-container d-lg-flex d-none">
+                <a href="/">
+                    <img src="media/univerlist_logo.svg" style="width:170px;">
+                </a>
+                <ul id="leftnav" class="nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link span">Universities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link span">Compare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link span">Rankings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link span">Disciplines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link span">Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link span">Blog</a>
+                    </li>
+                </ul>
+
+                <ul id="rightnav" class="nav">
+                    <li class="nav-item" style="margin-right:8px;">
+                        <a class="nav-link span">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link span">Log in</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="navmobile" class="fluid-container d-flex d-lg-none align-items-center justify-content-between">
+                <a href="/">
+                    <img src="media/univerlist_logo.svg" style="max-height: 1.85714286em">
+                </a>
+                <div onclick="openMobileNavMenu();">
+                    <img src="media/menu.svg">
+                </div>
+            </div>
+        </div>
+
+        <!-- first header -->
+        <div class="header-container">
+            <div class="header-image"> 
+                <div class="header-horizontal-holder">
+                    <div class="header-text-holder">
+                        <h1 class="header-text">Find your <br>dream university</h1> 
+                    </div>
+                    
+                </div>
+                <div class="header4-text-holder">
+                    <h4 class="header4-text">Manchester Metropolitan University</h4>
+                    <p>Manchester, United Kingdom</p>
+                </div>
+
+                <div class="searchbar-holder">
+                    <div class="searchbar">
+                        <img src="media/search.svg" style=" vertical-align:middle;">
+                        <input type="search" placeholder="Universities, Online programs">
+                        <a class="btn">
+                            <span>Search</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- first three buttons -->
+        <div class="container">
+            <div style="margin-left:-15px; margin-right:-15px;">
+                <div class="d-flex justify-content-center triple-button-container">
+                
+                    <div class="col-4 col-lg-3">
+                        <a class="btn btn-sizing">
+                            <span class="d-none d-sm-block" style="letter-spacing:0px;">Bachelor's Degree</span>
+                            <span class="d-sm-none" style="letter-spacing:0px;">Bachelor</span>
+                        </a>
+                    </div>
+                    <div class="col-4 col-lg-3">
+                        <a class="btn btn-sizing">
+                            <span class="d-none d-sm-block" style="letter-spacing:0px;">Master's Degree</span>
+                            <span class="d-sm-none" style="letter-spacing:0px;">Master</span>
+                        </a>
+                    </div>
+                    <div class="col-4 col-lg-3">
+                        <a class="btn btn-sizing">
+                            <span class="d-none d-sm-block" style="letter-spacing:0px;">Online Degree</span>
+                            <span class="d-sm-none" style="letter-spacing:0px;">Online</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- universities slider -->
+        <section style="padding-bottom: 5em;">
+            
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center" style="margin-bottom: 27px;">
+                    <h3>Universities</h3>
+                    <a class="fancy-btn"><span>Show all →</span></a>
+                </div>
+            </div>
+            <div class="container carousel-container">
+                <div class="carousel" data-flickity='{"groupCells":1, "cellAlign":"left"}'>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/30cc432d886419672bd2800454c25e57.webp">
+                        </div>
+                        <h4>Manchester Metropolitan University</h4>
+                        <span>Manchester, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/5b50f267711204aa59a50f57386cf56e.webp">
+                        </div>
+                        <h4>İstanbul Kültür University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/6b121d8f4209791c62de3a055c0d5d75.webp">
+                        </div>
+                        <h4>The University of Law</h4>
+                        <span>Guildford, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/fb6366951f264954715f637091b8b607.webp">
+                        </div>
+                        <h4>Yaşar University</h4>
+                        <span>İzmir, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/01c0d553e2909b801d36a6b21e401af9.webp">
+                        </div>
+                        <h4>University of Liverpool</h4>
+                        <span>Liverpool, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/6ce741eb41050c52ad41b621f642258f.webp">
+                        </div>
+                        <h4>Bahçeşehir University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/e31ff4140e5521dec653dba34d35d17a.webp">
+                        </div>
+                        <h4>Cardiff University</h4>
+                        <span>Cardiff, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/a5a2a62a880aeda13d3c893f9ab53182.webp">
+                        </div>
+                        <h4>İstinye University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- most popular programs buttons -->
+        <section style="padding-bottom:7em">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center" style="margin-bottom: 39px;">
+                    <h3>Most Popular Programs</h3>
+                    <a class="fancy-btn"><span>Show all →</span></a>
+                </div>
+                <div class="row" style="margin-left:-15px; margin-right:-15px;">
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Software Engineering</span>
+                            <img class="back-image" src="media/arch@2x.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Phychiatry</span>
+                            <img class="back-image" src="media/arch@2x.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Computer Engineering</span>
+                            <img class="back-image" src="media/arch@2x.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Psychology</span>
+                            <img class="back-image" src="media/arch@2x.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Cyber Security</span>
+                            <img class="back-image" src="media/arch@2x.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Molcular Biology and<br> Genetics</span>
+                            <img class="back-image" src="media/arch@2x.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Law</span>
+                            <img class="back-image" src="media/arch@2x.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Business Administration</span>
+                            <img class="back-image" src="media/arch@2x.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- colored backgound area (compare your favorite universities) -->
+        <div class="col-12 image-background-section">
+            <div class="image-section-text-holder">
+                <h2 class="d-none d-md-block">Compare your<br>favorite universities</h2>
+                <h3 class="d-md-none">Compare your<br>favorite universities</h3>
+                <a class="fancy-btn black-btn-sizing"><span>Compare</span></a>
+            </div>
+        </div>
+
+        <!-- online universities slider -->
+        <section>
+            
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center" style="margin-bottom: 39px;">
+                    <h3>Online Universities</h3>
+                    <a class="fancy-btn"><span>Show all →</span></a>
+                </div>
+            </div>
+            <div class="container carousel-container">
+                <div class="carousel" data-flickity='{"groupCells":1, "cellAlign":"left"}'>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/30cc432d886419672bd2800454c25e57.webp">
+                        </div>
+                        <h4>Manchester Metropolitan University</h4>
+                        <span>Manchester, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/5b50f267711204aa59a50f57386cf56e.webp">
+                        </div>
+                        <h4>İstanbul Kültür University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/6b121d8f4209791c62de3a055c0d5d75.webp">
+                        </div>
+                        <h4>The University of Law</h4>
+                        <span>Guildford, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/fb6366951f264954715f637091b8b607.webp">
+                        </div>
+                        <h4>Yaşar University</h4>
+                        <span>İzmir, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/01c0d553e2909b801d36a6b21e401af9.webp">
+                        </div>
+                        <h4>University of Liverpool</h4>
+                        <span>Liverpool, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/6ce741eb41050c52ad41b621f642258f.webp">
+                        </div>
+                        <h4>Bahçeşehir University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/e31ff4140e5521dec653dba34d35d17a.webp">
+                        </div>
+                        <h4>Cardiff University</h4>
+                        <span>Cardiff, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/a5a2a62a880aeda13d3c893f9ab53182.webp">
+                        </div>
+                        <h4>İstinye University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- universities in the united kingdom slider -->
+        <section>
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center" style="margin-bottom: 39px;">
+                    <h3>Universities in the United Kingdom</h3>
+                    <a class="fancy-btn"><span>Show all →</span></a>
+                </div>
+            </div>
+            <div class="container carousel-container">
+                <div class="carousel" data-flickity='{"groupCells":1, "cellAlign":"left"}'>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/30cc432d886419672bd2800454c25e57.webp">
+                        </div>
+                        <h4>Manchester Metropolitan University</h4>
+                        <span>Manchester, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/5b50f267711204aa59a50f57386cf56e.webp">
+                        </div>
+                        <h4>İstanbul Kültür University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/6b121d8f4209791c62de3a055c0d5d75.webp">
+                        </div>
+                        <h4>The University of Law</h4>
+                        <span>Guildford, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/fb6366951f264954715f637091b8b607.webp">
+                        </div>
+                        <h4>Yaşar University</h4>
+                        <span>İzmir, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/01c0d553e2909b801d36a6b21e401af9.webp">
+                        </div>
+                        <h4>University of Liverpool</h4>
+                        <span>Liverpool, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/6ce741eb41050c52ad41b621f642258f.webp">
+                        </div>
+                        <h4>Bahçeşehir University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/e31ff4140e5521dec653dba34d35d17a.webp">
+                        </div>
+                        <h4>Cardiff University</h4>
+                        <span>Cardiff, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/a5a2a62a880aeda13d3c893f9ab53182.webp">
+                        </div>
+                        <h4>İstinye University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- universities in the united states of america slider -->
+        <section class="padding-lg-75">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center" style="margin-bottom: 39px;">
+                    <h3>Universities in the United States of America</h3>
+                    <a class="fancy-btn"><span>Show all →</span></a>
+                </div>
+            </div>
+            <div class="container carousel-container">
+                <div class="carousel" data-flickity='{"groupCells":1, "cellAlign":"left"}'>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/30cc432d886419672bd2800454c25e57.webp">
+                        </div>
+                        <h4>Manchester Metropolitan University</h4>
+                        <span>Manchester, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/5b50f267711204aa59a50f57386cf56e.webp">
+                        </div>
+                        <h4>İstanbul Kültür University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/6b121d8f4209791c62de3a055c0d5d75.webp">
+                        </div>
+                        <h4>The University of Law</h4>
+                        <span>Guildford, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/fb6366951f264954715f637091b8b607.webp">
+                        </div>
+                        <h4>Yaşar University</h4>
+                        <span>İzmir, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/01c0d553e2909b801d36a6b21e401af9.webp">
+                        </div>
+                        <h4>University of Liverpool</h4>
+                        <span>Liverpool, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/6ce741eb41050c52ad41b621f642258f.webp">
+                        </div>
+                        <h4>Bahçeşehir University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/e31ff4140e5521dec653dba34d35d17a.webp">
+                        </div>
+                        <h4>Cardiff University</h4>
+                        <span>Cardiff, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/a5a2a62a880aeda13d3c893f9ab53182.webp">
+                        </div>
+                        <h4>İstinye University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- colored backgound area (find your dream master degree) -->
+        <div style="background-color: #D2C8F1;">
+            <div class="container image-section" style="padding-right: 0px;">
+                <div id="image-background-section2" class="col-12 image-background-section">
+                    <div class="image-section-text-holder">
+                        <h2 class="d-none d-md-block">Find your dream<br>Master Degree</h2>
+                        <h3 class="d-md-none">Find your dream<br>Master Degree</h3>
+                        <a class="fancy-btn black-btn-sizing" style="margin-top:22px;"><span>Find now!</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- countries slider -->
+        <section class="padding-lg-75">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center" style="margin-bottom: 39px;">
+                    <h3>Countries</h3>
+                    <a class="fancy-btn"><span>Show all →</span></a>
+                </div>
+            </div>
+            <div class="container carousel-container">
+                <div class="carousel" data-flickity='{"groupCells":1, "cellAlign":"left"}'>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/30cc432d886419672bd2800454c25e57.webp">
+                        </div>
+                        <h4>Manchester Metropolitan University</h4>
+                        <span>Manchester, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/5b50f267711204aa59a50f57386cf56e.webp">
+                        </div>
+                        <h4>İstanbul Kültür University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/6b121d8f4209791c62de3a055c0d5d75.webp">
+                        </div>
+                        <h4>The University of Law</h4>
+                        <span>Guildford, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/fb6366951f264954715f637091b8b607.webp">
+                        </div>
+                        <h4>Yaşar University</h4>
+                        <span>İzmir, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/01c0d553e2909b801d36a6b21e401af9.webp">
+                        </div>
+                        <h4>University of Liverpool</h4>
+                        <span>Liverpool, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/6ce741eb41050c52ad41b621f642258f.webp">
+                        </div>
+                        <h4>Bahçeşehir University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/e31ff4140e5521dec653dba34d35d17a.webp">
+                        </div>
+                        <h4>Cardiff University</h4>
+                        <span>Cardiff, United Kingdom</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/a5a2a62a880aeda13d3c893f9ab53182.webp">
+                        </div>
+                        <h4>İstinye University</h4>
+                        <span>İstanbul, Turkey</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- disciplines buttons -->
+        <section style="padding-bottom:7em">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center" style="margin-bottom: 39px;">
+                    <h3>Disciplines</h3>
+                    <a class="fancy-btn"><span>Show all →</span></a>
+                </div>
+                <div class="row" style="margin-left:-15px; margin-right:-15px;">
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Agriculture, Forestry,<br>Fisheries and Veterinary</span>
+                            <img class="back-image" src="media/agriculture_1.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Arts and Humanities</span>
+                            <img class="back-image" src="media/arts.jpeg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Business, Administration<br>and Law</span>
+                            <img class="back-image" src="media/business_1.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Education</span>
+                            <img class="back-image" src="media/arch@2x.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Engineering, Manufacturing<br>and Construction</span>
+                            <img class="back-image" src="media/arch@2x.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Health and Welfare</span>
+                            <img class="back-image" src="media/arch@2x.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Information and<br>Communication<br>Technologies</span>
+                            <img class="back-image" src="media/arch@2x.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4" style="border-collapse: collapse;">
+                        <a class="btn btn-sizing2">
+                            <span>Natural Sciences,<br>Mathematics and Statistics</span>
+                            <img class="back-image" src="media/arch@2x.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles slider (different)-->
+        <section class="padding-lg-75">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center" style="margin-bottom: 39px;">
+                    <h3>Articles</h3>
+                    <a class="fancy-btn"><span>Show all →</span></a>
+                </div>
+            </div>
+            <div class="container carousel-container">
+                <div class="carousel" data-flickity='{"groupCells":1, "cellAlign":"left"}'>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/30cc432d886419672bd2800454c25e57.webp">
+                        </div>
+                        <h4>Manchester Metropolitan University</h4>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/5b50f267711204aa59a50f57386cf56e.webp">
+                        </div>
+                        <h4>İstanbul Kültür University</h4>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/6b121d8f4209791c62de3a055c0d5d75.webp">
+                        </div>
+                        <h4>The University of Law</h4>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/fb6366951f264954715f637091b8b607.webp">
+                        </div>
+                        <h4>Yaşar University</h4>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/01c0d553e2909b801d36a6b21e401af9.webp">
+                        </div>
+                        <h4>University of Liverpool</h4>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img">
+                            <img src="media/6ce741eb41050c52ad41b621f642258f.webp">
+                        </div>
+                        <h4>Bahçeşehir University</h4>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/e31ff4140e5521dec653dba34d35d17a.webp">
+                        </div>
+                        <h4>Cardiff University</h4>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="fake_img" >
+                            <img src="media/a5a2a62a880aeda13d3c893f9ab53182.webp">
+                        </div>
+                        <h4>İstinye University</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>    
+        <script src="codes.js"></script>  
+    </body>
+</html>
